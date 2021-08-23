@@ -28,6 +28,9 @@ public class SnakeAndLadder {
 
 				case LADDER: 
 					positionA += diceNumber;
+					if(positionA > MAX_POSITION) {
+						positionA = positionA - diceNumber;
+					}
 					break;
 
 				case SNAKE: 
