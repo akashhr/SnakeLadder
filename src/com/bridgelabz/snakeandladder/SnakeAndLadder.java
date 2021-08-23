@@ -13,9 +13,11 @@ public class SnakeAndLadder {
 		System.out.println("Welcome to the snake and ladder game!!!!!!!!!!!!!");
 		
 		int positionA = 0;
+		int diceCount = 0;
 		
 		if(positionA < MAX_POSITION) {
 			int diceNumber = 1 + (int) (Math.random() * 6);
+			diceCount ++;
 			System.out.println(diceNumber);
 			
 			System.out.println(diceNumber);
@@ -39,10 +41,8 @@ public class SnakeAndLadder {
 						positionA = 0;
 					break;
 		     }
+			System.out.println("Position after Die Roll "+diceCount+" : "+positionA);
 		}
-
-		System.out.println(positionA);
-		
-		
+		System.out.println("Total Dice Rolls : "+diceCount);		
 	}
 }
