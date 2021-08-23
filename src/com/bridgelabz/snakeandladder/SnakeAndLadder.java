@@ -8,8 +8,8 @@ public class SnakeAndLadder {
 	private static final int MAX_POSITION = 100;
 	private static final int MIN_POSITION = 0;
 
-	public static int positionA = 0;
-	public static int positionB = 0;
+	public static int positionofPlayerA = 0;
+	public static int positionofPlayerB = 0;
 	
 	public static int turnofPlayerA() {
 		System.out.println("Player A is Rolling Dice");
@@ -25,24 +25,24 @@ public class SnakeAndLadder {
 				break;
 
 			case LADDER: 
-				positionA += dice;
-				if(positionA > MAX_POSITION) {
-					positionA = positionA-dice;
+				positionofPlayerA += dice;
+				if(positionofPlayerA > MAX_POSITION) {
+					positionofPlayerA = positionofPlayerA-dice;
 				}
-				if(positionA == MAX_POSITION) {
-					return positionA;
+				if(positionofPlayerA == MAX_POSITION) {
+					return positionofPlayerA;
 				}
 				turnofPlayerA();
 				break;
 
 			case SNAKE: 
-				positionA -= dice;
-				if(positionA < MIN_POSITION ) {
-					positionA = 0;
+				positionofPlayerA -= dice;
+				if(positionofPlayerA < MIN_POSITION ) {
+					positionofPlayerA = 0;
 				}
 				break;
 		}
-		return positionA;
+		return positionofPlayerA;
 	}
 
 	public static int turnofPlayerB() {
@@ -59,24 +59,24 @@ public class SnakeAndLadder {
 				break;
 
 			case LADDER: 
-				positionB += dice;
-				if(positionB > MAX_POSITION) {
-					positionB = positionB-dice;
+				positionofPlayerB += dice;
+				if(positionofPlayerB > MAX_POSITION) {
+					positionofPlayerB = positionofPlayerB-dice;
 				}
-				if(positionB == MAX_POSITION) {
-					return positionB;
+				if(positionofPlayerB == MAX_POSITION) {
+					return positionofPlayerB;
 				}
 				turnofPlayerB();
 				break;
 
 			case SNAKE: 
-				positionB -= dice;
-				if(positionB < MIN_POSITION ) {
-					positionB = 0;
+				positionofPlayerB -= dice;
+				if(positionofPlayerB < MIN_POSITION ) {
+					positionofPlayerB = 0;
 				}
 				break;
 		}
-		return positionB;
+		return positionofPlayerB;
 	}
 	
 	public static void main(String[] args) {
